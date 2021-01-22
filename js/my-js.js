@@ -24,7 +24,7 @@
 	function buildDesarrollo(desarrollo){
 		const htmlDesarrollo = `
 		<h5>Muy Bien! Entonces vamos a diseñar un/a <span class="h4">${desarrollo}</span></h5>
-		<h5>¿Queres er la cotizacion o te la enviamos?</h5>
+		<h5>¿Queres ver la cotizacion o te la enviamos?</h5>
 		`;
 		return htmlDesarrollo;
 	};
