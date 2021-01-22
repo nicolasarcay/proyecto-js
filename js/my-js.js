@@ -21,13 +21,22 @@
 		`;
 		return htmlDesign;
 	};
+	function buildDesarrollo(desarrollo){
+		const htmlDesarrollo = `
+		<h5>Muy Bien! Entonces vamos a diseñar un/a <span class="h4">${desarrollo}</span></h5>
+		<h5>¿Queres er la cotizacion o te la enviamos?</h5>
+		`;
+		return htmlDesarrollo;
+	};
 	const nombre = document.getElementById('nombre')
 	const empresa = document.getElementById('empresa')
 	const design = document.getElementById('design')
+	const desarrollo = document.getElementById('desarrollo')
 	
 	function onChange(event){
 		nombre.innerHTML = buildNombre(document.querySelector('#name').value);
 	};
+	
 	function onEmpresa(event){
 		empresa.innerHTML = buildEmpresa(document.querySelector('#company').value);
 	};
@@ -38,6 +47,18 @@
 
 		}else if (document.getElementById('bootstrap').checked === true) {
 			design.innerHTML = buildDesign('Bootstrap');
+		}
+	};
+	
+	function onDesarrollo(event){
+		if (document.getElementById('corporativo').checked === true){
+			desarrollo.innerHTML = buildDesarrollo('Sitio Corporativo');
+
+		}else if (document.getElementById('tienda').checked === true) {
+			desarrollo.innerHTML = buildDesarrollo('Tienda Online');
+		}
+		else if (document.getElementById('one-page').checked === true) {
+			desarrollo.innerHTML = buildDesarrollo('Sitio de Pagina Unica');
 		}
 	};
 
