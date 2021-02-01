@@ -138,19 +138,10 @@
 	    cotizacion.innerHTML = buildCotizar(total)
 	  }
 	};
+// Jquery Animaciones
 
-	/*Sacar el submit del boton
-		formToDo.addEventListener('submit', (event) => {
-	    event.preventDefault();
-	    let title = event.target.elements.title.value
-	    listaDeTareas.addTodo(title);
-	});*/
-
-	/*Display none a una div
-		let listsDeClose = document.getElementsByClassName('close');
-	for (let e = 0; e < listsDeClose.length; e++) {
-	    listsDeClose[e].onclick = function() {
-	        let div = this.parentElement;
-	        div.style.display = "none";
-	    }
-	}*/
+$("#paso1").click(function(){
+	$("#personal-info").hide(1500, function(){
+		$("#company-info").show(1500)
+	})
+});
