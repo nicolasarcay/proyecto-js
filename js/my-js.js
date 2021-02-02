@@ -1,6 +1,6 @@
 	function buildNombre(nombre) {
 	  const htmlNombre = `
-		<h3>Hola, ${nombre}</h3> 
+		<h3>Hola, <span class="text-warning">${nombre}</span></h3> 
 		<h4>Gracias por comenzar con la cotización!</h4>
 		`;
 	  return htmlNombre;
@@ -8,7 +8,7 @@
 
 	function buildEmpresa(empresa) {
 	  const htmlEmpresa = `
-		<h5>El Presupuesto es para <span class="h4">${empresa}</span></h5>
+		<h5>El Presupuesto es para <span class="h4 text-warning">${empresa}</span></h5>
 		<h5>Perfecto! Entonces Continuemos...</h5>
 		`;
 	  return htmlEmpresa;
@@ -16,7 +16,7 @@
 
 	function buildDesign(design) {
 	  const htmlDesign = `
-		<h5>El diseño lo haremos en <span class="h4">${design}</span></h5>
+		<h5>El diseño lo haremos en <span class="h4 text-warning">${design}</span></h5>
 		<h5>Perfecto! Entonces Continuemos...</h5>
 		`;
 	  return htmlDesign;
@@ -24,7 +24,7 @@
 
 	function buildDesarrollo(desarrollo) {
 	  const htmlDesarrollo = `
-		<h5>Muy Bien! Entonces vamos a diseñar un/a <span class="h4">${desarrollo}</span></h5>
+		<h5>Muy Bien! Entonces vamos a diseñar un/a <span class="h4 text-warning">${desarrollo}</span></h5>
 		<h5>¿Queres ver la cotizacion o te la enviamos?</h5>
 		`;
 	  return htmlDesarrollo;
@@ -32,7 +32,7 @@
 
 	function buildCotizar(valor) {
 	  const htmlCotizar = `
-		  <h3>El precio estimado es de $${valor}</h3> 
+		  <h3>El precio estimado es de <span class="text-warning">$${valor}</span></h3> 
 		  <h4>Gracias! En breve nos comuncaremos con usted!</h4>
 		  `;
 	  return htmlCotizar;
@@ -140,8 +140,23 @@
 	};
 // Jquery Animaciones
 
-$("#paso1").click(function(){
+$("#paso1").on('click', function(){
 	$("#personal-info").hide(1500, function(){
+		$("#company-info").show(1500)
+	})
+});
+$("#paso2").on('click', function(){
+	$("#company-info").hide(1500, function(){
+		$("#desing-info").show(1500)
+	})
+});
+$("#paso1ir").on('click', function(){
+	$("#company-info").hide(1500, function(){
+		$("#personal-info").show(1500)
+	})
+});
+$("#paso2ir").on('click', function(){
+	$("#desing-info").hide(1500, function(){
 		$("#company-info").show(1500)
 	})
 });

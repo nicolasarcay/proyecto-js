@@ -41,7 +41,7 @@
       <div class="col-lg-8 col-md-9 col-12 text-white px-lg-0 px-4 order-lg-2 order-1">
         <h3 class="pb-5">Formulario de Cotización</h3>
         <form id="cotizacion" onsubmit="return false">
-          <div id="personal-info" class="d-block">
+          <div id="personal-info" style="display: block;">
             <div class="form-group border-0">
               <label class="h5" for="name">¿Cual es tu nombre?</label>
               <input type="text" class="form-control" id="name" placeholder="Nombre Completo"
@@ -119,6 +119,7 @@
               </div>
             </div>
             <div class="d-flex justify-content-end pr-3">
+              <button type="submit" id="paso2ir" class="btn btn-warning mb-2 m-3">Anterior</button>
               <button type="submit" class="btn btn-warning mb-2 m-3" onclick="onCotizar(false)">Ver Cotizacion</button>
               <button type="submit" class="btn btn-warning mb-2 m-3" onclick="onCotizar(true)">Enviar Cotizacion</button>
             </div>
