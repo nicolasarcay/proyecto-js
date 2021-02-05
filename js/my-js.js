@@ -32,7 +32,7 @@
 
 	function buildCotizar(valor) {
 	  const htmlCotizar = `
-		  <h3>El precio estimado es de <span class="text-warning">$${valor}</span></h3> 
+		  <h3>El precio estimado es de <span class="text-warning">${valor}</span></h3> 
 		  <h4>Gracias! En breve nos comuncaremos con usted!</h4>
 		  `;
 	  return htmlCotizar;
@@ -108,6 +108,15 @@
 	      resultado = resultado * 1.1
 	      break;
 	  }
+	  //   if (moneda != 'ARS') {
+	  //     $.ajax({
+	  //       url: 'https://v6.exchangerate-api.com/v6/1fa78b958c4cae0f0c2d6e4b/pair/ARS/USD/1500',
+	  //       type: 'GET',
+	  //       success: function (data) {
+	  //         alert(data)
+	  //       }
+	  //     });
+	  //   }
 	  return resultado;
 	};
 
@@ -138,25 +147,25 @@
 	    cotizacion.innerHTML = buildCotizar(total)
 	  }
 	};
-// Jquery Animaciones
+	// Jquery Animaciones
 
-$("#paso1").on('click', function(){
-	$("#personal-info").hide(1500, function(){
-		$("#company-info").show(1500)
-	})
-});
-$("#paso2").on('click', function(){
-	$("#company-info").hide(1500, function(){
-		$("#desing-info").show(1500)
-	})
-});
-$("#paso1ir").on('click', function(){
-	$("#company-info").hide(1500, function(){
-		$("#personal-info").show(1500)
-	})
-});
-$("#paso2ir").on('click', function(){
-	$("#desing-info").hide(1500, function(){
-		$("#company-info").show(1500)
-	})
-});
+	$("#paso1").on('click', function () {
+	  $("#personal-info").hide(1500, function () {
+	    $("#company-info").show(1500)
+	  })
+	});
+	$("#paso2").on('click', function () {
+	  $("#company-info").hide(1500, function () {
+	    $("#desing-info").show(1500)
+	  })
+	});
+	$("#paso1ir").on('click', function () {
+	  $("#company-info").hide(1500, function () {
+	    $("#personal-info").show(1500)
+	  })
+	});
+	$("#paso2ir").on('click', function () {
+	  $("#desing-info").hide(1500, function () {
+	    $("#company-info").show(1500)
+	  })
+	});
