@@ -115,32 +115,33 @@
                   mobile, tablet).</small>
               </div>
             </div>
-            <div id="money-info" style="display: none;">
-              <div class="form-group border-0">
-                <h4 class="h5">¿En que moneda desea hacer el pago?</h4>
-                <div class="form-check py-3">
-                  <input class="form-check-input" type="radio" name="radioOptions" id="ARS" value="ARS"
-                    onclick="onDesign(event)">
-                  <label class="form-check-label font-weight-bolder" for="ARS">Pesos Argentinos</label>
-                </div>
-                <div class="form-check form-check">
-                  <input class="form-check-input" type="radio" name="radioOptions" id="Euro" value="Euro"
-                    onclick="onDesign(event)">
-                  <label class="form-check-label font-weight-bolder" for="Euro">Euro</label>
-                </div>
-                <div class="form-check form-check">
-                  <input class="form-check-input" type="radio" name="radioOptions" id="USD" value="USD"
-                    onclick="onDesign(event)">
-                  <label class="form-check-label font-weight-bolder" for="USD">USD</label>
-                </div>
-              </div>
-              <div class="form-group border-0">
-                <label class="h5 pb-3" for="comentarios">¿Queres comentarnos algo mas?</label>
-                <textarea class="form-control" id="comentarios" rows="4"></textarea>
-              </div>
-            </div>
             <div class="d-flex justify-content-end pr-3">
               <button type="submit" id="paso2ir" class="btn btn-warning mb-2 m-3">Anterior</button>
+              <button type="submit" id="paso3" class="btn btn-warning mb-2 m-3">Siguiente</button>
+            </div>
+          </div>
+          <div id="money-info" style="display: none;">
+            <div class="form-group border-0">
+              <h4 class="h5">¿En que moneda desea hacer el pago?</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioMoney" id="ARS" value="ARS">
+                <label class="form-check-label font-weight-bolder" for="ARS">Pesos Argentinos</label>
+              </div>
+              <div class="form-check form-check">
+                <input class="form-check-input" type="radio" name="radioMoney" id="EUR" value="Euro">
+                <label class="form-check-label font-weight-bolder" for="EUR">Euro</label>
+              </div>
+              <div class="form-check form-check">
+                <input class="form-check-input" type="radio" name="radioMoney" id="USD" value="USD">
+                <label class="form-check-label font-weight-bolder" for="USD">USD</label>
+              </div>
+            </div>
+            <div class="form-group border-0">
+              <label class="h5 pb-3" for="comentarios">¿Queres comentarnos algo mas?</label>
+              <textarea class="form-control" id="comentarios" rows="4"></textarea>
+            </div>
+            <div class="d-flex justify-content-end pr-3">
+              <button type="submit" id="paso3ir" class="btn btn-warning mb-2 m-3">Anterior</button>
               <button type="submit" class="btn btn-warning mb-2 m-3" onclick="onCotizar(false)">Ver Cotizacion</button>
               <button type="submit" class="btn btn-warning mb-2 m-3" onclick="onCotizar(true)">Enviar
                 Cotizacion</button>
